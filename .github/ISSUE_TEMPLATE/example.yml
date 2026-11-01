@@ -1,0 +1,51 @@
+name: Propose a NEXTHON contribution
+description: Suggest a new example, tutorial, challenge or project.
+title: "[Contribution]: "
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Contribution type
+      options:
+        - Beginner example
+        - Code example
+        - Tutorial
+        - Programming challenge
+        - Community project
+        - Documentation
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Contribution title
+      placeholder: "Example: Number Guessing Game"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain what you want to contribute.
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Proposed implementation
+      description: How would you implement this contribution?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Checklist
+      options:
+        - label: I agree to follow the contribution guidelines.
+          required: true
+        - label: My contribution is related to the NEXTHON language.
+          required: true
